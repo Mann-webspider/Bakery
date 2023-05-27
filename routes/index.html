@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Bakery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+
+        },
+        fontFamily: {
+          'primary': "Bebas Neue",
+          'secondary': "Herr Von Muellerhoff"
+        }
+
+
+      }
+
+
+    }
+
+
+  </script>
+  <script src="https://js.stripe.com/v3/"></script>
+  
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+        
+      </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main id="main">
+    <!-- <video src="./assest/pexels-elijah-o'donnell-2832316-1920x1080-60fps.mp4" autoplay loop></video  > -->
+      <img src="./assest/mae-mu-m9pzwmxm2rk-unsplash.jpg" class="h-screen object-cover bg-center w-screen z-1 absolute" alt="">
+    <div class="img absolute top-0 z-[-1]"></div>
+    <nav class="absolute top-0  w-full flex items-center justify-center z-10">
+      <div class="left text-4xl">
+        <ul>
+          <li>Home</li>
+          <li>products</li>
+        </ul>
+      </div>
+      <img src="./assest/Bakery.jpg" alt="" class="w-28">
+      <div class="left text-4xl">
+        <ul>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </nav>
+    <section class="flex items-center justify-center h-full">
+      <div class="fadder"></div>
+
+      <h1 class="z-10 text-8xl font-medium heading1 ">
+        Welcome to The Bakery
+      </h1>
+    </section>
+
+  </main>
+  <section class="interaction h-fit py-16  flex items-center justify-evenly">
+    <div class="lft grid grid-cols-2 grid-rows-6 gap-5"> 
+      <figure class="fig-1 row-start-2 row-end-4">
+
+        <img src="./assest/pixzolo-photography-BiWb1Y8wpZk-unsplash.jpg " alt="">
+      </figure>
+      <figure class="fig-2 row-start-1 row-end-3">
+
+        <img src="./assest/pexels-chevanon-photography-1108117.jpg" alt="">
+      </figure>
+      <figure class="fig-3 row-start-3 row-end-5">
+
+        <img src="./assest/mae-mu-m9pzwmxm2rk-unsplash.jpg" alt="">
+      </figure>
+      <figure class="fig-4 row-start-4 row-end-6">
+
+        <img src="./assest/mae-mu-ecUVGNZA1TM-unsplash.jpg" alt="">
+      </figure>
+
+      <figure class="fig-5 row-start-5 row-end-7">
+
+        <img src="./assest/wesual-click-rsWZ-P9FbQ4-unsplash.jpg" alt="">
+      </figure>
+
+    </div>
+    <div class="rght max-w-lg">
+      <h2 class="text-4xl leading-8">Choose your best food</h2>
+      <p class="text-white font-sans mt-8 font-light italic">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        In nostrum, assumenda ipsa placeat tempora ducimus sunt commodi quos aperiam consequatur, reprehenderit
+        voluptatibus eum libero! Officia, maiores laudantium sunt soluta quos earum quod neque fuga aspernatur!</p>
+      <a href="#product"><button class="px-12 bg-amber-400 text-black font-semibold tracking-widest mt-8 text-lg py-2">
+          Explore</button></a>
+    </div>
+  </section>
+
+  <section id="product" class="products h-screen bg-black px-32 py-12">
+    <h1 class="text-center text-7xl py-4">Products</h1>
+    <div class="grid grid-cols-4 gap-5">
+      <div class="card   ">
+        <div class="img2">
+          <img src="./assest/mae-mu-m9pzwmxm2rk-unsplash.jpg" alt="">
+          <div class="px-4 ">
+            <h2 class="tracking-wider text-3xl">Crossiant</h2>
+            
+            <h4 class="text-3xl">1.5 $</h4>
+          </div>
+          <input type="button"  onclick="sendItem('price_1NCKAESEIF6HvjnirB8QORAp')" class="font-sans py-1 px-6 bg-amber-600" value="buy"/>
+          <label for="quan" class="label">Quantity</label>
+          <input type="number" id="price_1NCKAESEIF6HvjnirB8QORAp" class="text-white font-sans bg-amber-600 w-20" value="1" min="1" max="10" >
+        </div>
+      </div>
+      <div class="card" >
+        <div class="img2">
+          <img src="./assest/mae-mu-ecUVGNZA1TM-unsplash.jpg" alt="">
+          <div class="px-4">
+
+            <h2 class="tracking-wider text-3xl">pan cakes</h2>
+            <h4 class="text-3xl">2.99 $</h4>
+          </div>
+          <input type="button"  onclick="sendItem('price_1NCKAkSEIF6HvjniUSI3cxS9')" class="font-sans py-1 px-6 bg-amber-600" value="buy"/>
+          <label for="quan" class="label">Quantity</label>
+          <input type="number" id="price_1NCKAkSEIF6HvjniUSI3cxS9" class="text-white font-sans bg-amber-600 w-20" value="1" min="1" max="10">
+        </div>
+      </div>
+      <div class="card">
+        <div class="img2">
+          <img src="./assest/pexels-flo-maderebner-745988.jpg" alt="">
+          <div class="px-4">
+            <h2 class="tracking-wider text-3xl">bread</h2>
+            <h4 class="text-3xl">5 $</h4>
+          </div>
+          <input type="button"  onclick="sendItem('price_1NCKZISEIF6HvjniPOCk6kwA')" class="font-sans py-1 px-6 bg-amber-600" value="buy"/>
+          <label for="quan" class="label">Quantity</label>
+          <input type="number" id="price_1NCKZISEIF6HvjniPOCk6kwA" class="text-white font-sans bg-amber-600 w-20" value="1" min="1" max="10">
+        </div>
+      </div>
+      <div class="card">
+        <div class="img2">
+          <img src="./assest/sara-cervera-0X6sEvSJxas-unsplash.jpg" alt="">
+          <div class="px-4">
+            <h2 class="tracking-wider text-3xl">sandwich</h2>
+            <h4 class="text-3xl">2 $</h4>
+          </div>
+          <input type="button"  onclick="sendItem('price_1NCKB9SEIF6HvjnidLKTTm4i')" class="font-sans py-1 px-6 bg-amber-600" value="buy"/>
+          <label for="quan" class="label">Quantity</label>
+          <input type="number" id="price_1NCKB9SEIF6HvjnidLKTTm4i" class="text-white font-sans bg-amber-600 w-20" value="1" min="1" max="10">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<script src="script.js">
+</script>
+</body>
+
+</html>

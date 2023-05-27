@@ -1,0 +1,107 @@
+html body{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: rgb(237, 188, 64);
+    scroll-behavior: smooth;
+    
+    
+  }
+  html::-webkit-scrollbar{
+    background-color: #151414;
+    color: aliceblue;
+    width: 10px;
+  }
+  
+  html::-webkit-scrollbar-thumb{
+    background-color: goldenrod ;
+    border-radius: 15px;
+    
+    
+  }
+ 
+ .img{
+    /* background-image: url('./assest/mae-mu-m9pzwmxm2rk-unsplash.jpg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter: brightness(0.75);
+    z-index: 2;
+  }
+  main{
+    height: 100vh;
+    background-color: #0f0f0f;
+  }
+  
+  .fadder{
+    height: 100%;
+    /* background-color: red; */
+    position: absolute;
+    color: aliceblue;
+    top: 0;
+  /* z-index: 5; */
+  width: 100%;
+    background: linear-gradient(0deg, rgb(5, 5, 5) 0%, rgba(0, 0, 0, 0.371) 5%, rgba(255, 255, 255, 0) 100%);
+  }
+  .left ul{
+    display: flex;
+  }
+  .left ul li{
+    margin: 0px 16px;
+  }
+
+  .lft img{
+    height: 12rem;
+    width: 12rem;
+    object-fit: cover;
+  }
+
+  .interaction{
+    background-color: #000000;
+    font-family: "Bebas Neue";
+  }
+
+  .heading1{
+    animation:fadein 3s;
+  }
+
+
+  .img2 h2{
+    font-family: "Bebas Neue";
+    padding: 0.5rem 0px;
+  }
+  .img2 img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    
+  }
+  .card{
+    height: fit-content;
+    max-width: 18rem;
+    /* padding: 1rem 1rem; */
+    /* background-color: #ffffff3d; */
+    color: white;
+    border-radius: 0.3rem;
+}
+.label{
+  font-family: "Bebas Neue";
+}
+input[type="number"]::-webkit-input-placeholder{
+appearance: none;
+}
+
+.card:hover{
+    transition: 300ms;
+    background-color: #fffffe39;
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100%  {
+      opacity: 1;
+    }
+  }

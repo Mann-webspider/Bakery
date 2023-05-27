@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cancel payment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+    
+            },
+            fontFamily: {
+              'primary': "Bebas Neue",
+              'secondary': "Herr Von Muellerhoff"
+            }
+    
+    
+          }
+    
+    
+        }
+    
+    
+      </script>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+            
+          </style>
+</head>
+<body>
+    <div class=' h-screen bg-[#ffffff] flex justify-center items-center flex-col'>
+        <div class="box w-fit h-fit hover:cursor-not-allowed flex justify-center items-center md:flex-col lg:flex-row flex-col">
+        <iframe src="https://embed.lottiefiles.com/animation/38993" crossOrigin="anonymous"></iframe>
+        <h1 class='text-5xl font-semibold text-center'>Payment Was Cancelled</h1>
+        </div>
+        <h1 class='text-2xl font-semibold text-center'>You will be automatic redirect to page</h1>
+    </div>  
+    <script>
+        setTimeout(()=>{
+            
+            window.location.assign(window.location.origin)
+        },5000)
+    </script>
+</body>
+</html>

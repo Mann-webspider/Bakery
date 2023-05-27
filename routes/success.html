@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successful payment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+    
+            },
+            fontFamily: {
+              'primary': "Bebas Neue",
+              'secondary': "Herr Von Muellerhoff"
+            }
+    
+    
+          }
+    
+    
+        }
+    
+    
+      </script>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+      
+
+        
+</head>
+<body>
+    <div class='w-screen h-screen bg-[#fff] flex justify-center items-center main flex-col'>
+        <div class="box w-fit h-fit hover:cursor-not-allowed flex justify-center items-center lg:flex-row flex-col ">
+        
+        <iframe src="https://embed.lottiefiles.com/animation/97240"></iframe>
+        <h1 class='text-5xl font-semibold text-center'>Payment Was Successful</h1>
+        </div>
+        <h1 class='text-2xl font-semibold text-center'>You will be automatic redirect to page</h1>
+    </div> 
+    <script>
+        setTimeout(()=>{
+            window.location.assign(window.location.origin)
+        },5000)
+    </script>
+</body>
+</html>
