@@ -31,7 +31,7 @@ const storeItems = new Map([
 
 
 
-
+const DOMAIN = "https://bakery-front.vercel.app/"
 
 app.post('/create-checkout-session',cors(), async (req, res) => {
   try{
