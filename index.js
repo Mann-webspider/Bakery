@@ -8,7 +8,7 @@ const app = express();
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 app.use(express.json())
 app.use(cors({origin:"*",allowedHeaders:"*"}))
-app.use(express.static("routes"))
+// app.use(express.static("routes"))
 
 
 
@@ -18,7 +18,9 @@ const setUrl = (newData)=>{
   url = newData
 }
 
-
+app.get("/",(req,res)=>{
+  res.send("hello")
+})
 
 const storeItems = new Map([
     [1,{priceInCents:12386,name:"Crossiant"}],
