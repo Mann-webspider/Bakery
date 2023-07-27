@@ -35,7 +35,7 @@ const DOMAIN = "https://bakery-front.vercel.app/"
 
 app.post('/create-checkout-session',cors(), async (req, res) => {
   try{
-
+    console.log("mil gaya")
     const session = await stripe.checkout.sessions.create({
         payment_method_types:['card'],
       
@@ -57,6 +57,7 @@ app.post('/create-checkout-session',cors(), async (req, res) => {
     res.json({sessionId:session.id});
     
   }catch (e){
+  
     console.log(e.massage);
   }
   });
